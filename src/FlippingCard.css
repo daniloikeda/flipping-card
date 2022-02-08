@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card__content:hover {
+    transform: rotateY(0.5turn);
+}
+
+.card__content {
+    text-align: center;
+    position: relative;
+    padding: 5em;
+    transition: transform 2.5s;
+    transform-style: preserve-3d;
+  }
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-style: preserve-3d;
+    display:grid;
+    align-content:center;
+    backface-visibility:hidden;
+}
+
+.card__back {
+    transform:rotateY(0.5turn);
+}
+
+.card__front .title {
+    transform: translateZ(100px);
+}
+
+.card__front .description {
+    transform: translateZ(50px);
+}
+
+.card__back .title {
+    transform: translateZ(100px);
+}
+
+.card__back .description {
+    transform: translateZ(50px);
+}
